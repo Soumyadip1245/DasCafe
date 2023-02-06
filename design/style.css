@@ -1,0 +1,23 @@
+section#table{
+    margin: 0 auto;
+}
+main{
+    padding: 0;
+}
+ul#ex1 {
+    margin: 0 auto;
+}
+.input-group {
+    display: flex;
+    margin: 2rem auto;
+    width: 20% !important;
+}
+@media (max-width: 500px){
+    section#table{
+        overflow-x: scroll;
+        width: 88%;
+    }
+    .input-group {
+        width: 80% !important;
+    }
+}

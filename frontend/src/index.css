@@ -1,0 +1,23 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  transition: all 0.5s ease-in-out;
+}
+i{
+  color: black;
+}
+a,button{
+  cursor: pointer;
+}
+[data-theme="dark"]{
+  background-color: #c7bbda9c;
+  color: black;
+}
+[data-theme="light"]{
+  background-color: white;
+  color: black;
+}
+[data-theme="dark"] label {
+  color: white;
+}
