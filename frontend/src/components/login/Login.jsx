@@ -143,8 +143,8 @@ function Login() {
                                     Email
                                 </label>
                                 <div className="form-notch">
-                                    <div className="form-notch-leading" style={{ width: 9 }} />
-                                    <div className="form-notch-middle" style={{ width: "114.4px" }} />
+                                    <div className="form-notch-leading" Style={{ width: 9 }} />
+                                    <div className="form-notch-middle" Style={{ width: "114.4px" }} />
                                     <div className="form-notch-trailing" />
                                 </div>
                             </div>
@@ -155,8 +155,8 @@ function Login() {
                                     Password
                                 </label>
                                 <div className="form-notch">
-                                    <div className="form-notch-leading" style={{ width: 9 }} />
-                                    <div className="form-notch-middle" style={{ width: "114.4px" }} />
+                                    <div className="form-notch-leading" Style={{ width: 9 }} />
+                                    <div className="form-notch-middle" Style={{ width: "114.4px" }} />
                                     <div className="form-notch-trailing" />
                                 </div>
                             </div>
@@ -196,8 +196,8 @@ function Login() {
                                     Name
                                 </label>
                                 <div className="form-notch">
-                                    <div className="form-notch-leading" style={{ width: 9 }} />
-                                    <div className="form-notch-middle" style={{ width: "114.4px" }} />
+                                    <div className="form-notch-leading" Style={{ width: 9 }} />
+                                    <div className="form-notch-middle" Style={{ width: "114.4px" }} />
                                     <div className="form-notch-trailing" />
                                 </div>
                             </div>
@@ -207,8 +207,8 @@ function Login() {
                                     Phone
                                 </label>
                                 <div className="form-notch">
-                                    <div className="form-notch-leading" style={{ width: 9 }} />
-                                    <div className="form-notch-middle" style={{ width: "114.4px" }} />
+                                    <div className="form-notch-leading" Style={{ width: 9 }} />
+                                    <div className="form-notch-middle" Style={{ width: "114.4px" }} />
                                     <div className="form-notch-trailing" />
                                 </div>
                             </div>
@@ -219,8 +219,8 @@ function Login() {
                                     Email
                                 </label>
                                 <div className="form-notch">
-                                    <div className="form-notch-leading" style={{ width: 9 }} />
-                                    <div className="form-notch-middle" style={{ width: "114.4px" }} />
+                                    <div className="form-notch-leading" Style={{ width: 9 }} />
+                                    <div className="form-notch-middle" Style={{ width: "114.4px" }} />
                                     <div className="form-notch-trailing" />
                                 </div>
                             </div>
@@ -235,8 +235,8 @@ function Login() {
                                     Password
                                 </label>
                                 <div className="form-notch">
-                                    <div className="form-notch-leading" style={{ width: 9 }} />
-                                    <div className="form-notch-middle" style={{ width: "114.4px" }} />
+                                    <div className="form-notch-leading" Style={{ width: 9 }} />
+                                    <div className="form-notch-middle" Style={{ width: "114.4px" }} />
                                     <div className="form-notch-trailing" />
                                 </div>
                             </div>

@@ -1,0 +1,40 @@
+.pagination {
+    display: inline-block;
+    transition: all 0.5s ease-in-out;
+  }
+  
+main{
+    padding: 0;
+}
+ul#ex1 {
+    margin: 0 auto;
+}
+.input-group {
+    display: flex;
+    margin: 2rem auto;
+    width: 20% !important;
+}
+table.table.align-middle.mb-0.bg-white{
+    width: 80%;
+    margin: 0 auto;
+}
+i{
+    font-size: 20px;
+}
+ul.pagination {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+.p-4 {
+    padding: 0rem!important;
+}
+@media (max-width: 500px){
+    table.table.align-middle.mb-0.bg-white{
+        width: 100%;
+        overflow-x: scroll;
+    }
+    .input-group {
+        width: 80% !important;
+    }
+}

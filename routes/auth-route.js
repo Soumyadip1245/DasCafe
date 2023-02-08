@@ -53,7 +53,9 @@ router.post('/register', (req, res) => {
 })
 router.get('/getUsers', (req, res) => {
     User.find().then((value) => {
-        res.json({ value })
+        res.json({ value, message: "Data Fetched" })
+    }).catch(() => {
+        res.json({ message: "No Data Fetched For Details" })
     })
 })
 router.post('/setAuthorised/:id', (req, res) => {
@@ -80,7 +82,6 @@ router.put('/editUser/:id', (req, res) => {
     var ob = {
         name: req.body.name,
         email: req.body.email,
-        password: req.body.password,
         position: req.body.position,
         phone: req.body.phone
     }

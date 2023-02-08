@@ -6,8 +6,8 @@ section{
 .btn-group {
     width: 100%;
 }
-label.btn.btn-secondary{
-    font-size: 10px;
+label.btn.btn-secondary {
+    font-size: 8px;
 }
 @media (max-width: 500px) {
     section{
