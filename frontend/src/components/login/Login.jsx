@@ -11,6 +11,10 @@ function Login() {
     const [position, setPosition] = useState("")
     const [loginemail, setLoginemail] = useState("")
     const [loginpassword, setLoginpassword] = useState("")
+    const [alertStyle, setAlert] = useState("d-none")
+    const [alertMessage, setMessage] = useState("")
+    const [alertError, setError] = useState("d-none")
+    const [alertSuccess, setSuccess] = useState("d-none")
     const submitregister = async (e) => {
         e.preventDefault()
         var data = {
@@ -22,6 +26,18 @@ function Login() {
         }
         let res = await axios.post('http://localhost:8080/auth/register', data)
         if (res.data.success) {
+            setAlert("wrapper")
+            setError("toastw success")
+            setSuccess("fas fa-check-circle")
+            setMessage(res.data.message)
+            setTimeout(() => {
+                setAlert("d-none")
+
+                setError("d-none")
+                setSuccess("d-none")
+                setSuccess("d-none")
+                setMessage("")
+            }, 2000)
             console.log(res.data.message)
             setName("")
             setEmail("")
@@ -30,6 +46,18 @@ function Login() {
             setPosition("")
         }
         else {
+            setAlert("wrapper")
+            setError("toastw error")
+            setSuccess("fas fa-times-circle")
+            setMessage(res.data.message)
+            setTimeout(() => {
+                setAlert("d-none")
+                setMessage("")
+                setSuccess("d-none")
+
+                setError("d-none")
+                setSuccess("d-none")
+            }, 2000)
             setName("")
             setEmail("")
             setPassword("")
@@ -49,21 +77,88 @@ function Login() {
             console.log(res.data.message)
             let res1 = await axios.get('http://localhost:8080/auth/loginAuthorised/' + data.email)
             if (res1.data.logindata.authorised === false) {
+                setAlert("wrapper")
+                setError("toastw warning")
+                setMessage("Account is currently locked")
+                setSuccess("fas fa-info-circle")
+                setTimeout(() => {
+                    setAlert("d-none")
+                    setMessage("")
+                    setError("d-none")
+                    setSuccess("d-none")
+                    setSuccess("d-none")
+                }, 2000)
                 console.log("Account is currently locked")
             }
             else {
                 localStorage.setItem("token", res.data.token)
                 if (res1.data.logindata.position === "Admin") {
-                    console.log("Admin Panel")
-                    navigate('/admin')
+                    setAlert("wrapper")
+                    setError("toastw success")
+                    setMessage(res.data.message)
+                    setSuccess("fas fa-check-circle")
+                    setTimeout(() => {
+                        setAlert("d-none")
+                        setMessage("")
+                        setError("d-none")
+                        setSuccess("d-none")
+                    }, 2000)
+                    setTimeout(() => {
+                        setAlert("d-none")
+                        setMessage("")
+
+                        setError("d-none")
+                        setSuccess("d-none")
+                        console.log("Admin Panel")
+                        navigate('/admin')
+                    }, 2500)
+
                 }
                 else if (res1.data.logindata.position === "Employee") {
-                    console.log("Employee Panel")
-                    navigate('/employee')
+                    setAlert("wrapper")
+                    setError("toastw success")
+                    setSuccess("fas fa-check-circle")
+                    setMessage(res.data.message)
+                    setTimeout(() => {
+                        setAlert("d-none")
+                        setMessage("")
+
+                        setError("d-none")
+                        setSuccess("d-none")
+                    }, 2000)
+                    setTimeout(() => {
+                        setAlert("d-none")
+                        setMessage("")
+
+                        setError("d-none")
+                        setSuccess("d-none")
+                        console.log("Employee Panel")
+                        navigate('/employee')
+                    }, 2500)
+
                 }
                 else if (res1.data.logindata.position === "Inventory") {
-                    console.log("Inventory Panel")
-                    navigate('/inventory')
+                    setAlert("wrapper")
+                    setError("toastw success")
+                    setSuccess("fas fa-check-circle")
+                    setMessage(res.data.message)
+                    setTimeout(() => {
+                        setAlert("d-none")
+                        setMessage("")
+
+                        setError("d-none")
+                        setSuccess("d-none")
+                    }, 2000)
+                    setTimeout(() => {
+                        setAlert("d-none")
+                        setMessage("")
+
+                        setError("d-none")
+                        setSuccess("d-none")
+                        console.log("Inventory Panel")
+                        navigate('/inventory')
+                    }, 2500)
+
                 }
                 else {
                     console.log("No Position Allocated Yet")
@@ -74,6 +169,17 @@ function Login() {
 
         }
         else {
+            setAlert("wrapper")
+            setError("toastw error")
+            setSuccess("fas fa-times-circle")
+            setMessage(res.data.message)
+            setTimeout(() => {
+                setAlert("d-none")
+                setMessage("")
+
+                setError("d-none")
+                setSuccess("d-none")
+            }, 2000)
             setLoginemail("")
             setLoginpassword("")
             console.log(res.data.message)
@@ -81,6 +187,15 @@ function Login() {
     }
     return (
         <>
+            <div class={alertError}>
+                <div class="container-1">
+                    <i class={alertSuccess}></i>
+                </div>
+                <div class="container-2">
+                    <p>Message</p>
+                    <p>{alertMessage}</p>
+                </div>
+            </div>
             <section>
                 {/* Pills navs */}
                 <ul className="nav nav-pills nav-justified mb-3" id="ex1" role="tablist">

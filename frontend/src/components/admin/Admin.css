@@ -1,39 +1,57 @@
 .pagination {
     display: inline-block;
     transition: all 0.5s ease-in-out;
-  }
-  
-main{
+}
+
+main {
     padding: 0;
 }
+
 ul#ex1 {
     margin: 0 auto;
 }
+
 .input-group {
     display: flex;
     margin: 2rem auto;
     width: 20% !important;
 }
-table.table.align-middle.mb-0.bg-white{
+
+table.table.align-middle.mb-0.bg-white {
     width: 80%;
     margin: 0 auto;
 }
-i{
+
+i {
     font-size: 20px;
 }
+
 ul.pagination {
     display: flex;
     justify-content: center;
     margin-bottom: 2rem;
 }
+
 .p-4 {
-    padding: 0rem!important;
+    padding: 0rem !important;
 }
-@media (max-width: 500px){
-    table.table.align-middle.mb-0.bg-white{
+
+.row {
+    width: 88% !important;
+    margin: 1rem auto !important;
+}
+
+.card-body {
+    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+    border-radius: 10px;
+}
+
+@media (max-width: 500px) {
+    table.table.align-middle.mb-0.bg-white {
         width: 100%;
         overflow-x: scroll;
     }
+
     .input-group {
         width: 80% !important;
     }

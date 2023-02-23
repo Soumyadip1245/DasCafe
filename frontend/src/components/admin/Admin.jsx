@@ -29,7 +29,7 @@ function Admin() {
 
     }
     const increement = () => {
-        if (lastindex > userDetails.length) {
+        if (lastindex > userDetails.length - 1) {
             return
         }
         const currpage = pageno + 1
@@ -257,7 +257,72 @@ function Admin() {
                         </nav>}
                 </div>
                 <div className="tab-pane fade" id="ex3-pills-2" role="tabpanel" aria-labelledby="ex3-tab-2">
-                    Tab 2 content
+                    <div className="row">
+                        <div className="col-md-6 col-lg-3 mb-4">
+                            <div className="card h-100">
+                                <div className="card-body">
+                                    <h5 className="card-title">Inventory Used</h5>
+                                    <div className="progress my-3">
+                                        <div
+                                            className="progress-bar bg-success"
+                                            role="progressbar"
+                                            style={{ width: "75%" }}
+                                            aria-valuenow={75}
+                                            aria-valuemin={0}
+                                            aria-valuemax={100}
+                                        />
+                                    </div>
+                                    <p className="card-text">75%</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="col-md-6 col-lg-3 mb-4">
+                            <div className="card h-100">
+                                <div className="card-body">
+                                    <h5 className="card-title">Revenue Available</h5>
+                                    <div className="progress my-3">
+                                        <div
+                                            className="progress-bar bg-warning"
+                                            role="progressbar"
+                                            style={{ width: "50%" }}
+                                            aria-valuenow={50}
+                                            aria-valuemin={0}
+                                            aria-valuemax={100}
+                                        />
+                                    </div>
+                                    <p className="card-text">50%</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="col-md-6 col-lg-3 mb-4">
+                            <div className="card h-100">
+                                <div className="card-body">
+                                    <h5 className="card-title">Inventory Storage</h5>
+                                    <div className="progress my-3">
+                                        <div
+                                            className="progress-bar bg-danger"
+                                            role="progressbar"
+                                            style={{ width: "25%" }}
+                                            aria-valuenow={25}
+                                            aria-valuemin={0}
+                                            aria-valuemax={100}
+                                        />
+                                    </div>
+                                    <p className="card-text">25%</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="col-md-6 col-lg-3 mb-4">
+                            <div className="card">
+                                <div className="card-body  inventory-card">
+                                    <h5 className="card-title">Total Revenue</h5>
+                                    <p className="card-text text-muted mb-3">Total earnings:</p>
+                                    <h3 className="card-text text-success font-weight-bold">$500</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
             </div >
             {/* Pills content */}

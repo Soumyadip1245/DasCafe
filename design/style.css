@@ -1,23 +1,109 @@
-section#table{
-    margin: 0 auto;
-}
-main{
+* {
     padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    border: none;
+    font-family: "Poppins", sans-serif;
+    font-size: 14px;
 }
-ul#ex1 {
-    margin: 0 auto;
+
+body {
+    background-color: #f9f9f9;
 }
-.input-group {
-    display: flex;
-    margin: 2rem auto;
-    width: 20% !important;
+
+.wrapper {
+    width: 380px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+    border-radius: 7px;
 }
-@media (max-width: 500px){
-    section#table{
-        overflow-x: scroll;
-        width: 88%;
-    }
-    .input-group {
-        width: 80% !important;
-    }
+
+.toastw {
+    width: 100%;
+    height: 80px;
+    padding: 8px;
+    background-color: #ffffff;
+    border-radius: 7px;
+    display: grid;
+    grid-template-columns: 1.3fr 6fr 0.5fr;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.08);
+}
+
+.success {
+    border-left: 8px solid #47D764;
+}
+
+.error {
+    border-left: 8px solid #ff355b;
+}
+
+.info {
+    border-left: 8px solid #2F86EB;
+}
+
+.warning {
+    border-left: 8px solid #FFC021;
+}
+
+.error i {
+    color: #ff355b;
+}
+
+.info i {
+    color: #2F86EB;
+}
+
+.warning i {
+    color: #FFC021;
+}
+
+.toastw:not(:last-child) {
+    margin-bottom: 50px;
+}
+
+.container-1,
+.container-2 {
+    align-self: center;
+}
+
+.container-1 i {
+    font-size: 35px;
+}
+
+.success i {
+    color: #47D764;
+}
+
+.container-2 p:first-child {
+    color: #101020;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.container-2 p:last-child {
+    font-size: 12px;
+    font-weight: 400;
+    color: #656565;
+}
+
+.toastw button {
+    align-self: flex-start;
+    background-color: transparent;
+    font-size: 25px;
+    color: #656565;
+    line-height: 0;
+    cursor: pointer;
+}
+
+.row {
+    width: 88% !important;
+    margin: 1rem auto !important;
+}
+
+.card-body {
+    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+    border-radius: 10px;
 }
